@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35586dd9-da74-4980-b35c-22847b15547c" name="Changes" comment="update in rice price predictor">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/rice_gif.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/rice_img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/RicePricePredictor.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RicePricePredictor.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rice_price_predictor1.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,31 +56,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python.app.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.app.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.pycharm.community.ide.impl.configuration.PythonContentEntriesConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="QodanaReportsService">
-    <option name="descriptions">
-      <ReportDescription localRun="true" path="C:\Users\MSI\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="427e807d-a7d9-4e04-9199-7b78ab791e54" reportId="RicePricePredictor/qodana/2024-08-04" />
-    </option>
-  </component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Project Files\PyCharm Projects\RicePricePredictor\templates" />
+      <recent name="D:\Project Files\PyCharm Projects\RicePricePredictor\static" />
       <recent name="D:\Project Files\PyCharm Projects\RicePricePredictor" />
+      <recent name="D:\Project Files\PyCharm Projects\RicePricePredictor\templates" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -96,7 +98,11 @@
       <option name="presentableId" value="Default" />
       <updated>1722770491608</updated>
       <workItem from="1722770495909" duration="956000" />
-      <workItem from="1722771496624" duration="4500000" />
+      <workItem from="1722771496624" duration="14546000" />
+      <workItem from="1723087531654" duration="25000" />
+      <workItem from="1723087836457" duration="6000" />
+      <workItem from="1723087886004" duration="2000" />
+      <workItem from="1723113213207" duration="310000" />
     </task>
     <task id="LOCAL-00001" summary="update in rice price predictor">
       <option name="closed" value="true" />
@@ -106,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722771757699</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update in rice price predictor">
+      <option name="closed" value="true" />
+      <created>1722779463380</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1722779463380</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

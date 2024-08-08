@@ -1,34 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Rice Price Prediction</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rice Price Predictor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url("../static/bg.png"); /* Background image */
+            background-size: cover; /* Ensure the background covers the entire page */
+            color: #ffffff; /* White text color */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0 20px; /* Padding for better view on small screens */
+        }
+        .container {
+            display: flex;
+            align-items: center; /* Align items to the top */
+            max-width: 1600px;
+            width: 100%;
+        }
+        .form-section {
+            border-radius: 15px;
+            width: 1000px; /* Width of the form section */
+            margin-right: 400px; /* Space between form and image */
+        }
+        .form-section .brand-logo img {
+            max-width: 250px; /* Logo width */
+            margin-bottom: 15px; /* Space below logo */
+            margin-right: 215px;
+        }
+        .form-section h2 {
+            font-size: 28px; /* Larger heading */
+            margin-right: 220px;
+        }
+        .form-section p {
+            margin-bottom: 10px;
+            margin-right: 345px;
+        }
+        .form-group label {
+            color: #B8B8D1; /* Light gray label color */
+        }
+        .form-control {
+            background-color: #2A2A5C; /* Darker input background */
+            border: 1px solid #4E4E7C; /* Border color */
+            border-radius: 12px;
+            color: #ffffff; /* White input text */
+            padding: 8px;
+        }
+        .btn-primary {
+            background-color: #524EF4; /* Button color */
+            border: none;
+            padding: 12px;
+            border-radius: 20px;
+        }
+        .btn-primary:hover {
+            background-color: #403ED1;
+        }
+        .alert-info {
+            background-color: #E0F4FF;
+            color: #000;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .image-section {
+            display: flex;
+            align-items: center;
+        }
+        .image-section img {
+            max-width: 700px; /* Image width */
+            height: auto;
+            border-radius: 15px; /* Image border radius */
+        }
+    </style>
 </head>
 <body>
-    <h2>Predict the Price of Rice</h2>
-    <form action="/predict" method="post">
-        <label for="anuradhapura_producer_price">Anuradhapura Producer Price:</label>
-        <input type="text" id="anuradhapura_producer_price" name="anuradhapura_producer_price"><br>
-
-        <label for="kurunegala_producer_price">Kurunegala Producer Price:</label>
-        <input type="text" id="kurunegala_producer_price" name="kurunegala_producer_price"><br>
-
-        <label for="polonnaruwa_producer_price">Polonnaruwa Producer Price:</label>
-        <input type="text" id="polonnaruwa_producer_price" name="polonnaruwa_producer_price"><br>
-
-        <label for="production">Production:</label>
-        <input type="text" id="production" name="production"><br>
-
-        <label for="production_total">Total Production:</label>
-        <input type="text" id="production_total" name="production_total"><br>
-
-        <label for="exchange_rate">Exchange Rate:</label>
-        <input type="text" id="exchange_rate" name="exchange_rate"><br>
-
-        <label for="fuel_price">Fuel Price:</label>
-        <input type="text" id="fuel_price" name="fuel_price"><br>
-
-        <input type="submit" value="Predict">
-    </form>
-    <h3>{{ prediction_text }}</h3>
+    <div class="container">
+        <div class="form-section">
+            <div class="brand-logo text-center">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+            </div>
+            <h2 class="text-center">Rice Price Predictor</h2>
+            <p class="text-center">Let's get started!</p>
+            <form action="/predict" method="post">
+                <div class="form-group">
+                    <label for="anuradhapura_producer_price">Anuradhapura Producer Price:</label>
+                    <input type="number" step="any" class="form-control" id="anuradhapura_producer_price" name="anuradhapura_producer_price" placeholder="Rs. 150.00" required>
+                </div>
+                <div class="form-group">
+                    <label for="kurunegala_producer_price">Kurunegala Producer Price:</label>
+                    <input type="number" step="any" class="form-control" id="kurunegala_producer_price" name="kurunegala_producer_price" placeholder="Rs. 150.00" required>
+                </div>
+                <div class="form-group">
+                    <label for="polonnaruwa_producer_price">Polonnaruwa Producer Price:</label>
+                    <input type="number" step="any" class="form-control" id="polonnaruwa_producer_price" name="polonnaruwa_producer_price" placeholder="Rs. 200.00" required>
+                </div>
+                <div class="form-group">
+                    <label for="production">Production (kg):</label>
+                    <input type="number" class="form-control" id="production" name="production" placeholder="Kg 2500.00" required>
+                </div>
+                <div class="form-group">
+                    <label for="production_total">Total Production (Kg):</label>
+                    <input type="number" class="form-control" id="production_total" name="production_total" placeholder="Kg 4550.00" required>
+                </div>
+                <div class="form-group">
+                    <label for="exchange_rate">Exchange Rate (USD to LKR):</label>
+                    <input type="number" step="any" class="form-control" id="exchange_rate" name="exchange_rate" placeholder="Rs. 300.00" required>
+                </div>
+                <div class="form-group">
+                    <label for="fuel_price">Fuel Price (LKR/Litre):</label>
+                    <input type="number" step="any" class="form-control" id="fuel_price" name="fuel_price" placeholder="Rs. 350.00" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Predict</button>
+            </form>
+            {% if prediction_text %}
+            <div class="alert alert-info mt-3" role="alert">
+                {{ prediction_text }}
+            </div>
+            {% endif %}
+        </div>
+        <div class="image-section">
+            <img src="{{ url_for('static', filename='rice_gif.gif') }}" alt="Rice Image">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
