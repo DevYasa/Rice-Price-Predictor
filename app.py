@@ -5,7 +5,7 @@ import numpy as np
 app = Flask(__name__)
 
 # Load the model
-model = joblib.load('rice_price_predictor.pkl')
+model = joblib.load('rice_price_predictor_tuned.pkl')
 
 
 # Define the route for the homepage
